@@ -1,5 +1,5 @@
 # Phân loại bình luận mang tính xây dựng bằng bộ dữ liệu UIT-ViCTSD
-Repo này trình bày chi tiết toàn bộ quy trình từ preprocessing, embedding, training model, đánh giá các mô hình Machine Learning và Deep Learning. Bên cạnh đó, repo này cũng chưa source code của app demo.
+Repo này trình bày chi tiết toàn bộ quy trình từ preprocessing, embedding, training model, đánh giá các mô hình Machine Learning và Deep Learning. Bên cạnh đó, repo này cũng chứa source code của app demo.
 
 ## I. Data Overview
 Thống kê bộ dữ liệu:
@@ -9,7 +9,7 @@ Thống kê bộ dữ liệu:
 | [Train](./Data/Original/ViCTSD_train.csv) | 7000 | 29.22 | 14410 | - |
 | [Val](./Data/Original/ViCTSD_valid.csv) | 2000 | 30.19 | 7399 | 2535 |
 | [Test](./Data/Original/ViCTSD_test.csv) | 1000 | 28.92 | 4581 | 1101 |
-| [Full](./Data/data_full.txt) | 10000 | 29.38 | 17945 | - |
+| Full | 10000 | 29.38 | 17945 | - |
 
 ## II. Preprocessing
 Quy trình tiền xử lý dữ liệu đóng vai trò quan trọng để chuẩn hóa văn bản tiếng Việt trước khi đưa vào mô hình.
@@ -41,7 +41,7 @@ Quy trình tiền xử lý dữ liệu đóng vai trò quan trọng để chuẩ
 ## III. Modeling
 Quá trình huấn luyện và đánh giá mô hình được thực hiện chi tiết trong Notebook.
 
-👉 **Notebook Training:** [NLP_ML.ipynb](./NLP_ML.ipynb) và [NLP_PhoBERT](./NLP_PhoBERT.ipynb)
+👉 **Notebook Training:** [NLP_ML](./NLP_ML.ipynb) và [NLP_PhoBERT](./NLP_PhoBERT.ipynb)
 
 ### Các phương pháp tiếp cận
 Dự án thực nghiệm trên hai nhóm mô hình chính:
@@ -54,7 +54,7 @@ Dự án thực nghiệm trên hai nhóm mô hình chính:
 2.  **Deep Learning:**
     * Sử dụng **PhoBERT** (Pre-trained language model cho tiếng Việt) để Fine-tune.
     * Version: Last hidden state
-    ![PhoBERT Architecture](./assets/PhoBERT_Last_hidden_state.jpg)
+    ![PhoBERT Architecture](./assets/PhoBERT_last_hidden_state.jpg)
     * Version: 4 last hidden state
     ![PhoBERT Architecture](./assets/PhoBERT_4_last_hidden_state.jpg)
 
@@ -84,7 +84,7 @@ Bảng dưới đây so sánh hiệu suất giữa các mô hình trên tập Va
     <tr>
       <td rowspan="8" align="center"><b>Machine Learning</b></td>
       <td rowspan="5" align="center"><b>TF-IDF</b></td>
-      <td align="center"><b>Logistic Regression</b></td>
+      <td align="center">Logistic Regression</td>
       <td align="center">0.78</td>
       <td align="center">0.80</td>
       <td align="center">0.77</td>
@@ -159,4 +159,4 @@ Bảng dưới đây so sánh hiệu suất giữa các mô hình trên tập Va
   </tbody>
 </table>
 
-> **Nhận xét:** Các phương pháp **Machine Learning** truyền thống (đặc biệt là TF-IDF kết hợp với Non-Linear SVC) cho kết quả khá tốt, tuy nhiên **PhoBERT** (Deep Learning) sử dụng chiến lược **Last hidden state** vẫn đạt hiệu suất vượt trội nhất trên cả hai tập Validation và Test (Accuracy đạt 0.84 và F1-score đạt 0.83), khẳng định sức mạnh của Pre-trained model cho xử lý ngôn ngữ tự nhiên Tiếng Việt.
+**Nhận xét:** Các phương pháp **Machine Learning** truyền thống (đặc biệt là TF-IDF kết hợp với Non-Linear SVC) cho kết quả khá tốt, tuy nhiên **PhoBERT** (Deep Learning) sử dụng chiến lược **Last hidden state** vẫn đạt hiệu suất vượt trội nhất trên cả hai tập Validation và Test (Accuracy đạt 0.84 và F1-score đạt 0.83), khẳng định sức mạnh của Pre-trained model cho xử lý ngôn ngữ tự nhiên Tiếng Việt.
