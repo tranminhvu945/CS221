@@ -1,5 +1,5 @@
 # Phân loại bình luận mang tính xây dựng bằng bộ dữ liệu UIT-ViCTSD
-Repo này trình bày chi tiết toàn bộ quy trình từ preprocessing, embedding, training model, đánh giá các mô hình Machine Learning và Deep Learning. Bên cạnh đó, repo này cũng chứa source code của app demo.
+Repo này trình bày chi tiết toàn bộ quy trình từ preprocessing, embedding, training model, đánh giá các mô hình Machine Learning và Deep Learning. Bên cạnh đó, repo này cũng chứa source code của app demo [app](./app.py).
 * Slide: [Link slide]()
 * Report: [Link report]()
 
