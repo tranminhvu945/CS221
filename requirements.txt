@@ -11,3 +11,6 @@ vncorenlp
 torch 
 transformers 
 gensim
+matplotlib
+seaborn
+captum
